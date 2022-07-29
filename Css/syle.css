@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* Css Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Css Custom Variables */
+:root {
+  /* Colors */
+  --color-primary-900: hsl(229, 23%, 23%);
+  --color-primary-800: hsl(185, 75%, 39%);
+  --color-primary-700: hsl(227, 10%, 46%);
+
+  --color-neutral: hsl(0, 0%, 59%);
+
+  /* Font Family */
+  --ff-primary: "Kumbh Sans", sans-serif;
+  /* Font Sizes */
+  --fs-primary: 18px;
+  --fs-secondary: 13px;
+  /* Font Weights */
+  --fw-bold: 700;
+  --fw-regular: 400;
+}
+
+.container {
+  font-family: var(--ff-primary);
+  overflow: hidden;
+  position: relative;
+}
+
+.pattern {
+  position: absolute;
+  z-index: -1;
+}
+
+.pattern-top img,
+.pattern-bottom img {
+  width: 968px;
+}
+
+.pattern-top {
+  top: -42rem;
+  left: -19rem;
+}
+
+.pattern-bottom {
+  bottom: -39rem;
+  right: -15rem;
+}
+
+.card-container {
+  --radius: 15px;
+
+  margin: 10rem auto;
+  width: 350px;
+  height: 350px;
+  border-radius: var(--radius);
+}
+
+.card-img {
+  background: url(../images/bg-pattern-card.svg) center center/cover;
+  width: 100%;
+  height: 40%;
+  align-self: flex-start;
+  border-radius: var(--radius) var(--radius) 0 0;
+  position: relative;
+}
+
+.card-img img {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 7.5rem;
+  border-radius: 50%;
+  border: 5px solid hsl(0, 0%, 100%);
+}
+
+.card-information {
+  margin: 1.1rem 0;
+}
+
+.card-title {
+  margin: 1rem 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.card-title p {
+  margin: 10px;
+}
+
+.card-title p span {
+  padding-right: 8px;
+}
+
+.card-details {
+  flex-direction: row !important;
+  justify-content: space-evenly;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.card-details::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 0.0126rem;
+  background-color: hsla(0, 0%, 58.8%, 0.21);
+}
+
+/* Attributes */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Utility Classes */
+.flex-all-center {
+  display: flex;
+  flex-direction: column;
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+}
+
+.regular {
+  font-weight: var(--fw-regular);
+}
+
+.fc-primary-900 {
+  color: var(--color-primary-900);
+}
+
+.fc-primary-700 {
+  color: var(--color-primary-700);
+}
+
+.bc-primary {
+  background-color: var(--color-primary-800);
+}
+
+.bc-neutral {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.fs-primary {
+  font-size: var(--fs-primary);
+}
+
+.fs-secondary {
+  font-size: var(--fs-secondary);
+}
